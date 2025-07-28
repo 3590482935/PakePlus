@@ -16,7 +16,7 @@ html, body, form{overflow-y:auto;height:100%;}
 		url('../fonts/yjsz.eot'); /* IE9+,可以是具体的实际链接 */
 	}
 
-.ksh{height:100%;padding:15px;background:url(../images/beijing.jpg) no-repeat #061537;background-size:cover;overflow:hidden;position:relative;z-index:-2;}
+.ksh{height:98%;padding:15px;background:url(../images/beijing.jpg) no-repeat #061537;background-size:cover;overflow:hidden;position:relative;z-index:-2;}
 
 /* 加载旋转动画 */
 #load{width:100%;height:100%;position:absolute;background:url(../images/data08.png) no-repeat #061537;background-size:cover;top:0;left:0;z-index:999}
@@ -55,7 +55,7 @@ html, body, form{overflow-y:auto;height:100%;}
 
 /* .visual{height:calc(100% - 33px);padding-top:10px;} */
 .visual{height:calc(100% - 10%);}
-.visual_box{height:33.3%;}
+.visual_box{height:32%;}
 .visual_box .visual_title{position:relative;height:35px;margin:5px 0;}
 .visual_box .visual_title span{color:#fff;font-size:18px;line-height:35px;}
 .visual_box .visual_title img{width:100%;position:absolute;left:0;bottom:0;}
