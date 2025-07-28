@@ -281,7 +281,7 @@ option2 = {
 // ... existing code ...
 series: [
     {
-        name: '第一次探索',
+        name: '第二次探索',
         type: 'line',
         smooth: true,
         showSymbol: true,  // 确保标记点可见
@@ -301,7 +301,7 @@ series: [
         animationDelay: 0
     },
     {
-        name: '第二次探索',
+        name: '第一次探索',
         type: 'line',
         smooth: true,
         showSymbol: true,
@@ -315,7 +315,7 @@ series: [
             }
         },
         areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{offset: 0, color: 'rgba(255, 106, 0, 0.3)'},{offset: 1, color: 'rgba(255, 106, 0, 0)'}]) },
-        data: [150, 70, 80, 300, 80, 240],
+        data: [150, 40, 20, 300, 50, 320],
         animationDuration: 1500,
         animationEasing: 'cubicOut',
         animationDelay: 1500
