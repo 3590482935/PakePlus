@@ -320,26 +320,7 @@ series: [
         animationEasing: 'cubicOut',
         animationDelay: 1500
     },
-    {
-        name: '第三次探索',
-        type: 'line',
-        smooth: true,
-        showSymbol: true,
-        symbolSize: 8,
-        lineStyle: { width: 3, color: '#7b68ee' },
-        itemStyle: {
-            normal: {
-                color: '#7b68ee',  // 与线条颜色一致
-                borderColor: '#fff',
-                borderWidth: 2
-            }
-        },
-        areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{offset: 0, color: 'rgba(123, 104, 238, 0.3)'},{offset: 1, color: 'rgba(123, 104, 238, 0)'}]) },
-        data: [90, 120, 150, 210, 120, 180],
-        animationDuration: 1500,
-        animationEasing: 'cubicOut',
-        animationDelay: 3000
-    }
+    
 ]
 // ... existing code ...
 // ... existing code ...
