@@ -1,32 +1,309 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PakePlus App</title>
-        <script type="module" src="/main.js" defer></script>
-    </head>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>交通大数据分析平台</title>
+<!--设置是否为缩放模式 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 新 Bootstrap 核心 CSS 文件 --> 
+<link rel="stylesheet" type="text/css" href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+<!-- <meta http-equiv="refresh" content="50;"> -->
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 --> 
+<script src="js/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 --> 
+<script src="js/bootstrap.min.js"></script>
+<!--echarts JS-->
+<script src="js/echarts.min.js"></script>
+<!-- 轮播swiper文件 -->
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<!--界面样式-->
+<script src="js/visual.js"></script>
+<script src="js/china.js"></script>
+<script src="js/chartMap.js"></script>
+<link rel="stylesheet" type="text/css" href="css/visual.css">
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=5362ea9e5835ad9c9fb7613d08d2ce6b"></script>
+</head>
+<body class="ksh" >
+	<div id="load">
+		<div class="load_img"><!-- 加载动画 -->
+			<img class="jzxz1" src="images/jzxz1.png">
+			<img class="jzxz2" src="images/jzxz2.png">
+		</div>
+	</div>
+	<!-- 标题 -->
+	<div class="head_top" style="cursor:pointer;height: 10%;position: relative;" onclick="">
+		<img class="img-responsive" src="images/name2.png">
+		<div id="datetime" style="    position: absolute;
+    /* top: 10px; */
+    bottom: 0.25%;
+    right:9%;
+    color: #55bfff;
+    font-family: 'yjsz';
+    font-size: 25px;"></div>
+		
+	</div>
+	<!-- 柱状图 -->
+	<div class="visual">
+		<div class="visual_left">
+			<div class="visual_box">
+				<div class="visual_title">
+					<span>近期病害分析</span>
+					<img src="images/ksh33.png">
+				</div>
+				<div id="main1" class="visual_chart">
+					<!-- 图表将通过JavaScript渲染 -->
+				</div>
+			</div>
+			<!-- 折线图 -->
+			
+			<!--最新型号 -->
+			<div class="visual_box">
 
-    <body>
-        <main class="container">
-            <h1>Welcome to PakePlus</h1>
-            <form class="row" id="greet-form">
-                <input id="inputValue" placeholder="Enter a something..." />
-            </form>
-            <div class="resultBox">
-                <span>result: </span>
-                <span id="result"></span>
-            </div>
-            <div class="invokeBox">
-                <button id="openUrl">open_url_browser</button>
-                <button id="openUrlNew">open_url_new</button>
-                <button id="runCommand">run_command</button>
-                <button id="downloadFile">download_file</button>
-                <button id="getExeDir">get_exe_dir</button>
-                <button id="getEnvVar">get_env_var</button>
-                <button id="findPort">find_port</button>
-            </div>
-        </main>
-    </body>
+<!-- 标题 -->
+				<div class="visual_title">
+					<span>智瞳号最新型号</span>
+					<img src="images/ksh33.png">
+				</div>
+
+					<!--  -->
+			
+				<div class="visual_chart sfzcll">
+					<img src="images/car.png" class="sfzcll_image">
+					<img src="images/2.png" style="
+    height: 100%;
+" class="sfzcll_image1">
+					
+				</div>
+				<!-- 图片 -->
+				<!-- <img src="images/car.png"> -->
+			</div>
+
+			
+<div class="visual_box">
+				<div class="visual_title">
+					<span>检测时长统计</span>
+					<img src="images/ksh33.png">
+				</div>
+				<div class="visual_chart" id="main2">
+					<!-- <img src="images/car.png" > -->
+				</div>
+			</div>
+
+
+
+		</div>
+		
+		<div class="visual_con">
+			
+			<div class="visual_conBot">
+				<img class="visual_conBot_l" src="images/ksh42.png">
+				<img class="visual_conBot_2" src="images/ksh43.png">
+				<img class="visual_conBot_3" src="images/ksh44.png">
+				<img class="visual_conBot_4" src="images/ksh45.png">
+				<div class="visual_chart_text">
+					<!-- <h1>出行服务+大数据</h1>
+					<h2>交通大数据分析平台</h2> -->
+				</div>
+				<div class="visual_chart" id="main8">
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="tech-video" controls width="100%" height="100%">
+            <source src="images/shiping1.mp4" type="video/mp4">
+            您的浏览器不支持视频播放
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+</div>
+				<div class="visual_conBot_bot">
+					<div class="visual_conTop" style="text-align: center;">
+				
+				<div class="visual_conTop_box visual_conTop2">
+					<div >
+						<h3>采集图像总量(张)</h3>
+						<p style="text-align: center;">149760</p>
+						<div class="conTop_smil">
+							<!-- <a class="">张</a> -->
+							<!-- <a class="">平均车速<span>120</span>KM/H</i></a> -->
+						</div>
+					</div>
+				</div>
+				<div class="visual_conTop_box visual_conTop1">
+					<div >
+						<h3>上装电量(%)</h3>
+						<p >60</p>
+						<div class="conTop_smil">
+							<!-- <a class="sz">日环比:<i class="fa fa-long-arrow-up"></i></a> -->
+							<!-- <a class="xd">周环比:<span>-2%</span><i class="fa fa-long-arrow-down"></i></a> -->
+						</div>
+					</div>
+				</div>
+				<div class="visual_conTop_box visual_conTop2">
+					<div >
+						<h3>下装电量(%)</h3>
+						<p >20</p>
+						<div class="conTop_smil">
+							<!-- <a class="null">null</a>
+							<a class="xd">月环比:<span>-2%</span><i class="fa fa-long-arrow-down"></i></a> -->
+						</div>
+					</div>
+				</div>
+				<div class="visual_conTop_box visual_conTop1">
+					<div >
+						<h3>使用总时长(h)</h3>
+						<p >13</p>
+						<div class="conTop_smil">
+							<!-- <a class="sz">h</a> -->
+							<!-- <a class="xd">周环比:<span>-2%</span><i class="fa fa-long-arrow-down"></i></a> -->
+						</div>
+					</div>
+				</div>
+				<div class="visual_conTop_box visual_conTop2">
+					<div >
+						<h3>行驶总里程(km)</h3>
+						
+							<p >36.44</p>
+						
+						<!-- <div class="conTop_smil">
+							<a class="null">null</a>
+							<a class="xd">月环比:<span>-2%</span><i class="fa fa-long-arrow-down"></i></a>
+						</div> -->
+					</div>
+					
+				</div>
+				<div class="clear"></div>
+			</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		<div class="visual_right">
+			<div class="visual_box">
+				<div class="visual_title">
+					<span>隧洞病害异常提醒</span>
+					<img src="images/ksh33.png">
+				</div>
+				<div class="swiper-container visual_swiper1 visual_chart">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"  id="main3"></div>
+						<!-- <div class="swiper-slide"  id="main31"></div> -->
+					</div>
+				</div>
+			</div>
+			<div class="visual_box visualSfzsfl">
+				<div class="visual_title">
+					<span>智能生成养护决策</span>
+					<img src="images/ksh33.png">
+				</div>
+				<div class="visual_chart" id="main9">
+    <img src="images/aa.png" style="margin: 3% auto;
+    width: 100%;
+    height: 90%;">
+</div>
+				
+			</div>
+			<div class="visual_box">
+				<div class="visual_title">
+					<span>地理位置空间信息</span>
+					<img src="images/ksh33.png">
+				</div>
+				<div class="swiper-container visual_swiper2 visual_chart">
+					<img src="images/ditu.png" style="
+    margin: 0 10%;
+    width: 80%;
+    height: 90%;
+" class="sfzcll_image">
+					
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			var a=$('.visualSssf_left a')
+			for(var i=0;i<a.length;i++){
+				a[i].index=i;
+				a[i].onclick=function(){
+					for(var i=0;i<a.length;i++){
+						a[i].className=''
+						}
+					this.className='active'
+				}
+			}
+
+			var sfzcllH=$('.sfzcll_box').height()
+			var sfzcllHtwo=sfzcllH-2
+			$('.sfzcll_box').css('line-height',sfzcllH+'px')
+			$('.sfzcll_smallBk>div').css('line-height',sfzcllHtwo+'px')
+
+			//删除加载动画
+			$('#load').fadeOut(1000)
+    		setTimeout(function(){    
+    			$('#load').remove()
+    		}
+    		,1100);
+		})
+
+	//交通流量
+	var myChart1 = echarts.init(document.getElementById('main1'));
+    myChart1.setOption(option1);
+	//交通工具流量
+	var myChart2 = echarts.init(document.getElementById('main2'));
+    myChart2.setOption(option2);
+    //本月发生事件
+	var myChart3 = echarts.init(document.getElementById('main3'));
+    myChart3.setOption(option3);
+    // var myChart31 = echarts.init(document.getElementById('main31'));
+    // myChart31.setOption(option31);
+    var mySwiper1 = new Swiper('.visual_swiper1', {
+		autoplay: true,//可选选项，自动滑动
+		speed:800,//可选选项，滑动速度
+		autoplay: {
+		    delay: 5000,//1秒切换一次
+		  },
+	})
+    //收费站收费排行
+	// var myChart4 = echarts.init(document.getElementById('main4'));
+    // myChart4.setOption(option4);
+    // var myChart41 = echarts.init(document.getElementById('main41'));
+    // myChart41.setOption(option41);
+    // var mySwiper2 = new Swiper('.visual_swiper2', {
+	// 	autoplay: true,//可选选项，自动滑动
+	// 	direction : 'vertical',//可选选项，滑动方向
+	// 	speed:2000,//可选选项，滑动速度
+	// })
+    //今日实时收费
+	var myChart5 = echarts.init(document.getElementById('main5'));
+    myChart5.setOption(option5);
+    var myChart6 = echarts.init(document.getElementById('main6'));
+    myChart6.setOption(option6);
+    var myChart7 = echarts.init(document.getElementById('main7'));
+    myChart7.setOption(option7);
+	var myChart20 = echarts.init(document.getElementById('main20'));
+    myChart20.setOption(option20);
+    var myChart21 = echarts.init(document.getElementById('main21'));
+    myChart21.setOption(option21);
+    //中间地图
+	// var myChart8 = echarts.init(document.getElementById('main8'));
+    // myChart8.setOption(option8);
+    //收费站收费量
+	// var myChart9 = echarts.init(document.getElementById('main9'));
+    // myChart9.setOption(option9);
+	</script>
+	<script>
+		function updateDateTime() {
+			const now = new Date();
+			const datetimeElement = document.getElementById('datetime');
+			const date = now.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-');
+			const time = now.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+			datetimeElement.innerHTML = date + '&nbsp;&nbsp;' + time; // 使用HTML非断空格实体确保显示两个空格
+		}
+		setInterval(updateDateTime, 1000);
+		updateDateTime();
+	</script>
+
+ 
+</body>
 </html>
+
