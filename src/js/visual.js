@@ -1344,6 +1344,98 @@ option21 = {
 }
 //////////////////////今日实时收费 end
 
+// 车体状态柱状图
+option_car_status = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        },
+        formatter: function(params) {
+            return params[0].name + '<br/>'
+                + params[0].seriesName + ': ' + params[0].data + (params[0].name.includes('电压') ? 'V' : params[0].name.includes('电流') ? 'A' : params[0].name.includes('功率') ? 'W' : params[0].name.includes('电量') ? 'KWh' : '°C') + '<br/>'
+                + params[1].seriesName + ': ' + params[1].data + (params[1].name.includes('电压') ? 'V' : params[1].name.includes('电流') ? 'A' : params[1].name.includes('功率') ? 'W' : params[1].name.includes('电量') ? 'KWh' : '°C');
+        }
+    },
+    legend: {
+        data: ['上装', '下装'],
+        top: 10,
+        right: 10,
+        textStyle: { color: '#fff' }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'category',
+        data: ['电压', '电流', '功率', '电量', '温度'],
+        axisLine: { lineStyle: { color: '#57617B' }},
+        axisLabel: { color: '#fff' }
+    },
+    yAxis: {
+        type: 'value',
+        axisLine: { lineStyle: { color: '#57617B' }},
+        axisLabel: { color: '#fff' },
+        splitLine: { lineStyle: { color: 'rgba(87, 97, 123, 0.3)' }}
+    },
+    series: [
+        {
+            name: '上装',
+            type: 'bar',
+            data: [51.2, 39, 2000, 5.3, 37.2],
+            itemStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    { offset: 0, color: '#00f2fe' },
+                    { offset: 1, color: '#08c8ff' }
+                ]),
+                borderRadius: [4, 4, 0, 0]
+            },
+            emphasis: {
+                itemStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        { offset: 0, color: '#00f2fe' },
+                        { offset: 1, color: '#0080ff' }
+                    ])
+                }
+            },
+            animationDelay: function (idx) {
+                return idx * 100;
+            }
+        },
+        {
+            name: '下装',
+            type: 'bar',
+            data: [47.58, 16, 750, 5.2, 37.2],
+            itemStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    { offset: 0, color: '#7b68ee' },
+                    { offset: 1, color: '#483d8b' }
+                ]),
+                borderRadius: [4, 4, 0, 0]
+            },
+            emphasis: {
+                itemStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        { offset: 0, color: '#9370db' },
+                        { offset: 1, color: '#483d8b' }
+                    ])
+                }
+            },
+            animationDelay: function (idx) {
+                return idx * 100 + 100;
+            }
+        }
+    ],
+    animationEasing: 'elasticOut',
+    animationDelayUpdate: function (idx) {
+        return idx * 50;
+    }
+};
+//////////////////////车体状态柱状图 end
+
 // 病害数据柱状图
 function initDiseaseBarChart() {
   const container = document.getElementById('main1');
